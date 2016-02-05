@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Slack Mention",
+    "version": "1.0.0",
+    "description": "Slack message mention button",
+    "short_name": "Slack Mention",
+    "permissions": [
+        "https://*/*",
+        "background",
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.slack.com/*"],
+            "js": ["js/extend.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        "js/mention.js"
+    ]
+}
