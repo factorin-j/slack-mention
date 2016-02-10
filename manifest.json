@@ -4,6 +4,9 @@
     "version": "1.0.0",
     "description": "Slack message mention button",
     "short_name": "Slack Mention",
+    "icons": {
+        "128": "img/128.png"
+    },
     "permissions": [
         "https://*/*",
         "background",

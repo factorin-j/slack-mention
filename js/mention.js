@@ -30,6 +30,10 @@ var mentionButtonCreateTimer = setInterval(function () {
             var action = 'mention';
             var message = messages[i];
             var actionHoverContainer = message.querySelector('div.action_hover_container');
+            if (actionHoverContainer == null) {
+                continue;
+            }
+
             var mention = actionHoverContainer.querySelector('a[data-click="' + action + '"]');
             if (mention == null) {
                 var sender = message.querySelector('div.message_content a.message_sender');
@@ -50,8 +54,10 @@ var mentionButtonCreateTimer = setInterval(function () {
                 mention.setAttribute('class', 'ts_icon ts_icon_mentions ts_tip ts_tip_top ts_tip_float ts_tip_delay_600');
                 mention.addEventListener('click', function (e) {
                     var input = document.querySelector('textarea#message-input');
-                    input.value += ' @' + e.target.getAttribute('data-mention') + ': ';
-                    input.focus();
+                    if (input.getAttribute('disabled') != 'disabled') {
+                        input.value = input.value.trim() + ' @' + e.target.getAttribute('data-mention') + ': ';
+                        input.focus();
+                    }
                 });
 
                 actionHoverContainer.insertBefore(mention, actionHoverContainer.firstChild);
