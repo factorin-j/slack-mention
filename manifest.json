@@ -1,12 +1,13 @@
 {
     "manifest_version": 2,
     "name": "Slack Mention",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "description": "Slack message mention button",
     "short_name": "Slack Mention",
     "icons": {
         "128": "img/128.png"
     },
+    "update_url": "https://raw.githubusercontent.com/jm-factorin/slack-mention/master/updates.xml",
     "content_scripts": [
         {
             "matches": ["https://*.slack.com/*"],

@@ -1,7 +1,7 @@
 /*
 
 >> Usage
-npm install --save-dev
+npm install
 ./node_modules/.bin/gulp build
 
  */
