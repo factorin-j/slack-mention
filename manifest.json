@@ -7,21 +7,11 @@
     "icons": {
         "128": "img/128.png"
     },
-    "permissions": [
-        "https://*/*",
-        "background",
-        "tabs"
-    ],
-    "background": {
-        "scripts": ["js/background.js"]
-    },
     "content_scripts": [
         {
             "matches": ["https://*.slack.com/*"],
-            "js": ["js/extend.js"]
+            "run_at": "document_end",
+            "js": ["js/app.min.js"]
         }
-    ],
-    "web_accessible_resources": [
-        "js/mention.js"
     ]
 }

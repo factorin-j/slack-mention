@@ -1,0 +1,15 @@
+{
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jm-factorin/slack-mention"
+    },
+    "description": "Add mention button for Slack",
+    "license": "MIT",
+    "devDependencies": {
+        "gulp-concat": "2.6.0",
+        "gulp-uglify": "1.5.2"
+    },
+    "dependencies": {
+        "gulp": "3.9.1"
+    }
+}
